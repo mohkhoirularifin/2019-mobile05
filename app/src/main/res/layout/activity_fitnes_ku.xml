@@ -6,4 +6,74 @@
     android:layout_height="match_parent"
     tools:context=".activities.FitnesKu">
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="94dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="24dp"
+        android:layout_weight="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        android:onClick="handlerDips"
+        app:srcCompat="@drawable/dips" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="94dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageView4"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        android:onClick="handlerHandStand"
+        app:srcCompat="@drawable/handstand" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="94dp"
+        android:layout_height="72dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        android:onClick="handlerPushUp"
+        app:srcCompat="@drawable/pushups" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="471dp"
+        app:layout_constraintGuide_percent="0.8"
+        />
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="77dp"
+        android:text="Requirements"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/black"
+        android:textSize="18pt"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
+    <LinearLayout
+        android:id="@+id/myFitnessPlaceholder"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
