@@ -9,6 +9,7 @@ import android.view.View;
 import polinema.ac.id.starterchapter05.R;
 import polinema.ac.id.starterchapter05.fragments.DipsFragment;
 import polinema.ac.id.starterchapter05.fragments.FitnessFragment;
+import polinema.ac.id.starterchapter05.fragments.PushFragment;
 
 public class FitnesKu extends AppCompatActivity {
 
@@ -19,6 +20,18 @@ public class FitnesKu extends AppCompatActivity {
     }
 
     public void handlerPushUp(View view) {
+        PushFragment checkVisible = (PushFragment) getSupportFragmentManager().findFragmentByTag("FRAGMENT_PUSH_UP");
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        if (checkVisible != null && checkVisible.isVisible() ){
+//            fragmentTransaction.commit();
+        }
+        else {
+//            FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+            fragmentTransaction.setCustomAnimations(R.anim.enter_from_left,R.anim.exit_from_left,R.anim.enter_from_left,R.anim.exit_from_right);
+            fragmentTransaction.replace(R.id.myFitnessPlaceholder,new PushFragment(),"FRAGMENT_PUSH_UP");
+            fragmentTransaction.addToBackStack(null);
+            fragmentTransaction.commit();
+        }
     }
 
     public void handlerHandStand(View view) {
