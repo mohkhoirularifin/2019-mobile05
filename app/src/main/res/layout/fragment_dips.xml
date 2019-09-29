@@ -86,8 +86,8 @@
 
         <ImageView
             android:id="@+id/imageView11"
-            android:layout_width="204dp"
-            android:layout_height="296dp"
+            android:layout_width="300dp"
+            android:layout_height="350dp"
             android:src="@drawable/hasdipsdips"
             app:layout_constraintBottom_toBottomOf="@+id/imageView6"
             app:layout_constraintEnd_toEndOf="@+id/imageView6"
