@@ -21,6 +21,16 @@ public class RedFragment extends Fragment {
         // Required empty public constructor
     }
 
+    @Override
+    public void setUserVisibleHint(boolean isVisibleToUser) {
+        super.setUserVisibleHint(isVisibleToUser);
+    }
+
+    @Override
+    public boolean getUserVisibleHint() {
+        return super.getUserVisibleHint();
+    }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

@@ -15,6 +15,8 @@ import polinema.ac.id.starterchapter05.R;
  * A simple {@link Fragment} subclass.
  */
 public class BlueFragment extends Fragment {
+    static  boolean active1 = false;
+
 
 
     public BlueFragment() {
